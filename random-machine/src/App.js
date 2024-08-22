@@ -32,14 +32,30 @@ function App() {
     setAuthor(quotesArray[randomInteger].author)
   }
 
-function App() {
+// const OURquotesArray = [{quote: "Strive not to be a success, but rather to be of value.", author: "Albert Einstein"},
+  //   {quote:"The most difficult thing is the decision to act, the rest is merely tenacity.", author: "Amelia Earhart"},
+  //   {quote:"Nothing is impossible, the word itself says, “I’m possible!”", author:"Audrey Hepburn"},
+  //   {quote: "Dreaming, after all, is a form of planning.",author:"Gloria Steinem"}
+  // ]
+
   return (
     <div className="App">
-      <header className="App-header">
-      
+      <header className="App-header" style={{backgroundColor: accentColor}}>
+      <div id="quote-box" style={{color: accentColor}}>
+        {/* <h1>Random Number: {randomNumber}</h1> */}
+        <i class="fa fa-quote-left"> </i><p id="text">
+          "{quote}""
+        </p>
+        <p id="author">
+          - {author}
+        </p>
+        <div className="button">
+        <a id="tweet-quote" href={encodeURI('http://www.twitter.com/intent/tweet?text=${quote} -${author}')} style={{backgroundColor: accentColor}}><FontAwesomeIcon icon={faTwitter}/></a>
+        <button id="new-quote" onClick={()=> getRandomQuote()} style={{backgroundColor: accentColor}}>New Quotes</button>
+        </div>
+      </div>
       </header>
     </div>
   );
 }
-
 export default App;
