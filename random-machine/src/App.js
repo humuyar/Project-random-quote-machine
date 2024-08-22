@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <header className="App-header" style={{backgroundColor: accentColor}}>
       <div id="quote-box" style={{color: accentColor}}>
-        {/* <h1>Random Number: {randomNumber}</h1> */}
+        <h1>Random Number: {randomNumber}</h1>
         <i class="fa fa-quote-left"> </i><p id="text">
           "{quote}""
         </p>
